@@ -6,18 +6,35 @@
         xmlns:local="clr-namespace:Tema3_EquiposNBA"
         mc:Ignorable="d"
         Title="NBA" Height="450" Width="800" Icon="Imagenes\128 (3).ico">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="{x:Type WrapPanel}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <StackPanel x:Name="Panel" >
-            <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="10">
-                <StackPanel Margin="-7,0,7,0">
+            <Border>
+                <StackPanel>
                         <Panel.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF641BF0" Offset="0.037"/>
                                 <GradientStop Color="#FFCBBA1D" Offset="0.723"/>
                             </LinearGradientBrush>
                         </Panel.Background>
-                        <TextBlock FontSize="30" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap">Los Angeles Lakers</TextBlock>
-                        <WrapPanel HorizontalAlignment="Center">
+                        <TextBlock>Los Angeles Lakers</TextBlock>
+                        <WrapPanel>
                             <Image Source="Imagenes\9_lakers.png" Width="145"/>
                             <Image Source="Imagenes\14_lakers.png" Width="145"/>
                             <Image Source="Imagenes\23_lakers.png" Width="145"/>
@@ -33,7 +50,7 @@
                     </WrapPanel>
                     </StackPanel>
             </Border>
-            <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="10">
+            <Border>
                 <StackPanel>
                     <Panel.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -41,8 +58,8 @@
                             <GradientStop Color="#FFBF2424" Offset="1"/>
                         </LinearGradientBrush>
                     </Panel.Background>
-                    <TextBlock FontSize="30" FontWeight="Bold" TextAlignment="Center" Foreground="White">Miami Heat</TextBlock>
-                    <WrapPanel HorizontalAlignment="Center">
+                    <TextBlock Foreground="White">Miami Heat</TextBlock>
+                    <WrapPanel>
                         <Image Source="Imagenes\7_heat.png" Width="145"/>
                         <Image Source="Imagenes\14_heat.png" Width="145"/>
                         <Image Source="Imagenes\22_heat.png" Width="145"/>
